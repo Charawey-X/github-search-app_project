@@ -8,12 +8,14 @@ import { HttpClientModule } from '@angular/common/http';
 import { SearchpageComponent } from './components/searchpage/searchpage.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ResultpageComponent } from './components/resultpage/resultpage.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchpageComponent
+    SearchpageComponent,
+    ResultpageComponent
   ],
   imports: [
     BrowserModule,
