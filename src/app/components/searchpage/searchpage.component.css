@@ -1,0 +1,39 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    font-size: 20px;
+}
+
+.row {
+    width: 50%;
+}
+
+.text-danger {
+    font-size: 16px !important;
+}
+
+img {
+    height: 250px;
+    width: 250px;
+    float: left;
+}
+
+.github p {
+    display: inline-flex;
+    margin-top: 40px;
+    background: #121FCF;
+    background: -webkit-linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    background: -moz-linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    -moz-text-fill-color: transparent;
+}
+
+input::placeholder {
+    color: chocolate
+}
