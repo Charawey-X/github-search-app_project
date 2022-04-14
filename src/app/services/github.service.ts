@@ -34,7 +34,7 @@ export class GithubService {
         bio:string,
         updated_at:Date
     }
-    interface ApiResponseRepo{
+    interface ApiResponseRepositories{
         name:string,
         description:string,
         watchers:number,
@@ -68,7 +68,7 @@ export class GithubService {
             reject(error);
         })
         // Repositories
-        firstValueFrom(this.http.get<ApiResponseRepo[]>('https://api.github.com/users/' + username + '/repos'))
+        firstValueFrom(this.http.get<ApiResponseRepositories[]>('https://api.github.com/users/' + username + '/repos'))
         .then((response) =>{
             for (let i=0; i < response.length; i++){
                 this.repo.name = response[i].name;
