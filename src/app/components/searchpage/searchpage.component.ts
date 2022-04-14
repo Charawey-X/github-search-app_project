@@ -27,7 +27,7 @@ export class SearchpageComponent implements OnInit {
     }
   }
   hideAlert(){
-      this.isEmpty = false;
+    this.isEmpty = false;
   }
 
   ngOnInit(): void {
