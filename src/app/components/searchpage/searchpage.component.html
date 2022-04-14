@@ -11,7 +11,7 @@
         <div class="form">
             <form (ngSubmit)="startSearch()">
                 <div class="my-4">
-                    <input class="form-control" type="text" id="username" name="username" placeholder="Enter Username" [ngModel]="username" (focus)='hideAlert()' required/>
+                    <input class="form-control" type="text" id="username" name="username" placeholder="Enter Username" [(ngModel)]="username" (focus)='hideAlert()' required/>
                     <div class="text-danger alert" *ngIf='isEmpty'>Please enter a username to search.</div>
                     <button type="submit" class="btn text-uppercase my-3">
                        Search
