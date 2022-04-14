@@ -35,5 +35,6 @@ img {
 }
 
 input::placeholder {
-    color: chocolate
+    color: chocolate;
+    font-weight: 400;
 }
