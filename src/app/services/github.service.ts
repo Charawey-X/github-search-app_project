@@ -44,7 +44,7 @@ export class GithubService {
         created_at:Date
     }
     // User
-    var promise = new Promise((resolve, reject) => {
+    var promise:any = new Promise((resolve, reject) => {
       firstValueFrom(this.http.get<ApiResponseUser>('https://api.github.com/users/' + username))
         .then((response) =>{
             this.user.login = response.login;
@@ -99,8 +99,7 @@ export class GithubService {
             }
             reject(error);
         });
-        console.log(this.repos);
-        //return promise;
+        return promise;
     });
     //return promise;
   }
