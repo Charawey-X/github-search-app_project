@@ -37,8 +37,8 @@ export class GithubService {
     interface ApiResponseRepo{
         name:string,
         description:string,
-        stargazers_count:number,
-        forks_count:number,
+        watchers:number,
+        forks:number,
         language:string,
         svn_url:string,
         created_at:Date
@@ -73,8 +73,8 @@ export class GithubService {
             for (let i=0; i < response.length; i++){
                 this.repo.name = response[i].name;
                 this.repo.description = response[i].description;
-                this.repo.watchers = response[i].stargazers_count;
-                this.repo.forks = response[i].forks_count;
+                this.repo.watchers = response[i].watchers;
+                this.repo.forks = response[i].forks;
                 this.repo.language = response[i].language;
                 this.repo.svn_url = response[i].svn_url;
                 this.repo.created_at=response[i].created_at;

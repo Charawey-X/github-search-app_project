@@ -9,13 +9,15 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResultpageComponent } from './components/resultpage/resultpage.component';
 import { GithubService } from './services/github.service';
+import { DatePipe } from './pipes/date.pipe';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     SearchpageComponent,
-    ResultpageComponent
+    ResultpageComponent,
+    DatePipe
   ],
   imports: [
     BrowserModule,
