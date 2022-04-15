@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class DatePipe implements PipeTransform {
 
-  transform(value: any, args: any[]): any {
+  transform(value: any, args?: any): any {
     if (value) {
         const seconds = Math.abs((new Date().getTime() - new Date(value).getTime()) / 1000);
             if (seconds < 29)

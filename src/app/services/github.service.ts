@@ -11,6 +11,7 @@ import { User } from '../classes/user';
 })
 export class GithubService {
   user: User;
+  users:any []=[];
   repo: Repositories;
   repos:any[] = [];
 
@@ -58,6 +59,21 @@ export class GithubService {
             this.user.html_url = response.html_url;
             this.user.bio = response.bio;
             this.user.updated_at = response.updated_at;
+
+            this.user = new User(
+                  this.user.login,
+                  this.user.name,
+                  this.user.location,
+                  this.user.followers,
+                  this.user.following,
+                  this.user.public_repos,
+                  this.user.created_at,
+                  this.user.avatar_url,
+                  this.user.html_url,
+                  this.user.bio,
+                  this.user.updated_at
+                  );
+            this.users.push(this.user);
 
             resolve(response);
         }, error => {

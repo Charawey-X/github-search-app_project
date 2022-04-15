@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { User } from 'src/app/classes/user';
 import { GithubService } from 'src/app/services/github.service';
@@ -9,12 +9,12 @@ import { GithubService } from 'src/app/services/github.service';
   templateUrl: './resultpage.component.html',
   styleUrls: ['./resultpage.component.css']
 })
-export class ResultpageComponent implements OnInit {
+export class ResultpageComponent implements OnInit, AfterViewInit {
 
   user!: User;
   repos:any[] = [];
   githubService: GithubService;
-  //isDoneLoading: boolean;
+  isDoneLoading!: boolean;
   //browserRefresh: boolean;
   route: Router;
 
@@ -23,7 +23,13 @@ export class ResultpageComponent implements OnInit {
     this.route = route;
    }
 
+  ngAfterViewInit(){
+    this.isDoneLoading = true;
+  }
+
   ngOnInit(): void {
+
+    this.isDoneLoading = false;
     this.user = this.githubService.user;
     this.repos = this.githubService.repos;
   }

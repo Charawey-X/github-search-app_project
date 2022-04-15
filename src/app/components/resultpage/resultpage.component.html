@@ -20,7 +20,7 @@
         <div class="col-lg-4 profile-details">
             <h2 class="name mb-0 mt-3"><strong><a href="{{ user.html_url }}" target="_blank" rel="noopener noreferrer">{{ user.name }}</a></strong></h2>
             <p class="username"><a href="{{ user.html_url }}" target="_blank" rel="noopener noreferrer">@{{ user.login }} </a></p>
-            <p class="updated">Updated {{ user.updated_at | dateCount}}</p>
+            <p class="updated">Updated {{ user.updated_at | date}}</p>
             <p>{{ user.bio }}</p>
             <small><i class="fa fa-map-marker" aria-hidden="true"></i>{{ user.location }}</small>
             <div class="det-div">
@@ -44,9 +44,10 @@
                 <p>{{ repo.description }}</p>
             </div>
             <div class="project-meta">
-                <p><i class="fas fa-star    "></i>{{ repo.stargazers_count }}</p>
-                <p><i class="fas fa-code-branch    "></i>{{ repo.forks_count }}</p>
+                <p><i class="fas fa-star    "></i>{{ repo.watchers }}</p>
+                <p><i class="fas fa-code-branch    "></i>{{ repo.forks }}</p>
                 <p><i class="fas fa-file-code    "></i>{{ repo.language }}</p>
+                <p><i class="fas fa-file-code    "></i>{{ repo.created_at | date}}</p>
             </div>
         </div>
     </div>
