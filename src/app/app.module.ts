@@ -10,6 +10,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ResultpageComponent } from './components/resultpage/resultpage.component';
 import { GithubService } from './services/github.service';
 import { DatePipe } from './pipes/date.pipe';
+import { UsersComponent } from './components/users/users.component';
 
 
 @NgModule({
@@ -17,7 +18,8 @@ import { DatePipe } from './pipes/date.pipe';
     AppComponent,
     SearchpageComponent,
     ResultpageComponent,
-    DatePipe
+    DatePipe,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
