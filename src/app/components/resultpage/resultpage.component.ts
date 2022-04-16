@@ -29,9 +29,9 @@ export class ResultpageComponent implements OnInit, AfterViewInit {
 
   ngOnInit(): void {
 
-    this.isDoneLoading = false;
-    this.user = this.githubService.user;
-    this.repos = this.githubService.repos;
+    //this.isDoneLoading = false;
+    //this.user = this.githubService.user;
+    //this.repos = this.githubService.repos;
   }
 
 }

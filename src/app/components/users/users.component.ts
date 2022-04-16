@@ -1,6 +1,9 @@
-import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute, Router } from '@angular/router';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { User } from 'src/app/classes/user';
 import { GithubUserService } from 'src/app/services/github-user.service';
+import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
+import { faBuilding, faMapMarked, faEnvelope, faUser, faLink } from "@fortawesome/free-solid-svg-icons";
+import { ActivatedRoute } from '@angular/router';
 
 
 @Component({
@@ -10,23 +13,34 @@ import { GithubUserService } from 'src/app/services/github-user.service';
 })
 export class UsersComponent implements OnInit {
 
+  @Output() onSubmitForm:EventEmitter<string> = new EventEmitter
+
   username!:string;
   userDetails:any;
-  isEmpty!:boolean;
 
-  constructor(private active:ActivatedRoute,
+  user!:User
+  twitterIcon = faTwitter
+  githubIcon = faGithub
+  locationIcon = faMapMarked
+  companyIcon = faBuilding
+  emailIcon = faEnvelope
+  userIcon = faUser
+  linkIcon = faLink
+  iconcolor = '#64ffda'
+
+  constructor(private route:ActivatedRoute,
     private githubUserService:GithubUserService,
-    private route: Router
   ) { }
 
-  startSearch(){
-    this.active.params.subscribe(params =>{
+
+
+  ngOnInit(): void {
+    /*this.active.params.subscribe(params =>{
       this.username =params['id'];
       //console.log("params =", this.username);
     })
 
-    if(this.username){
-      this.githubUserService.getUser(this.username).subscribe(
+    this.githubUserService.getUser(this.username).subscribe(
         //{
         //complete:()=>{console.log("successful")},
         //error:()=>{
@@ -39,19 +53,13 @@ export class UsersComponent implements OnInit {
           //console.log(this.userDetails);
         }
       )
-      this.route.navigate(['../results']);
-    }
-    else{
-      this.isEmpty = true;
-    }
-  }
+     */
 
-  hideAlert(){
-    this.isEmpty = false;
+    this.route.queryParams.subscribe((params:any)=>{
+      this.username = params.data
+      this.onSubmitForm.emit(this.username)
+      this.githubUserService.getUser(this.username)
+      this.user = this.githubUserService.user
+    })
   }
-
-  ngOnInit(): void {
-    this.isEmpty = false;
-  }
-
 }

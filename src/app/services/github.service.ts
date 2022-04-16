@@ -1,16 +1,11 @@
-import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
-import { Router } from '@angular/router';
-import { firstValueFrom } from 'rxjs';
-import { Repositories } from '../classes/repositories';
-import { User } from '../classes/user';
 
 
 @Injectable({
   providedIn: 'root'
 })
 export class GithubService {
-  user: User;
+  /*user: User;
   users:any []=[];
   repo: Repositories;
   repos:any[] = [];
@@ -119,4 +114,5 @@ export class GithubService {
     });
     //return promise;
   }
+  */
 }

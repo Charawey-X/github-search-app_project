@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { GithubService } from 'src/app/services/github.service';
+
 
 
 @Component({
@@ -11,17 +11,13 @@ import { GithubService } from 'src/app/services/github.service';
 export class SearchpageComponent implements OnInit {
   username!: string;
   isEmpty!: boolean;
-  githubService: GithubService;
 
 
-  constructor(githubService: GithubService, private route: Router) {
-    this.githubService=githubService;
-   }
+  constructor(private route: Router) { }
 
   startSearch(){
     if(this.username){
-        this.githubService.getData(this.username);
-        this.route.navigate(['../results']);
+        this.route.navigate(['user'], {queryParams:{data:this.username}});
     }else{
         this.isEmpty = true;
     }

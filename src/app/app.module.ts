@@ -11,6 +11,7 @@ import { ResultpageComponent } from './components/resultpage/resultpage.componen
 import { GithubService } from './services/github.service';
 import { DatePipe } from './pipes/date.pipe';
 import { UsersComponent } from './components/users/users.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { UsersComponent } from './components/users/users.component';
     ReactiveFormsModule,
     NgbModule,
     BrowserAnimationsModule,
-    HttpClientModule
+    HttpClientModule,
+    FontAwesomeModule
   ],
   providers: [ GithubService ],
   bootstrap: [AppComponent]
