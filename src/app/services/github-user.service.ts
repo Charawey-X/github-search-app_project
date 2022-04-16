@@ -88,12 +88,12 @@ export class GithubUserService {
         error => {
             let status = error.status;
             if (status == 404){
-                this.route.navigate(['../404']);
+                this.route.navigate(['404']);
             }
             reject(error);
           }
         );
       });
-    return promise;
-  }
+      return promise;
+    }
 }

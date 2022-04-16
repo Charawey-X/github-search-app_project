@@ -2,7 +2,7 @@ import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { User } from 'src/app/classes/user';
 import { GithubUserService } from 'src/app/services/github-user.service';
 import { faGithub, faTwitter } from "@fortawesome/free-brands-svg-icons";
-import { faBuilding, faMapMarked, faEnvelope, faUser, faLink } from "@fortawesome/free-solid-svg-icons";
+import { faBuilding, faMapMarked, faEnvelope, faUser, faLink, faCalendar } from "@fortawesome/free-solid-svg-icons";
 import { ActivatedRoute } from '@angular/router';
 
 
@@ -16,7 +16,7 @@ export class UsersComponent implements OnInit {
   @Output() onSubmitForm:EventEmitter<string> = new EventEmitter
 
   username!:string;
-  userDetails:any;
+  //userDetails:any;
 
   user!:User
   twitterIcon = faTwitter
@@ -25,12 +25,17 @@ export class UsersComponent implements OnInit {
   companyIcon = faBuilding
   emailIcon = faEnvelope
   userIcon = faUser
+  calendarIcon = faCalendar
   linkIcon = faLink
   iconcolor = '#64ffda'
 
   constructor(private route:ActivatedRoute,
     private githubUserService:GithubUserService,
   ) { }
+
+  openBlogLink(link:string){
+    window.open(link)
+  }
 
 
 

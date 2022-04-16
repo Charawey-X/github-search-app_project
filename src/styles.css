@@ -23,6 +23,9 @@
         font-family: 'Roboto', "Helvetica Neue", sans-serif;
         color: lightgrey;
         background: black;
+    }
+    
+    .searchpage {
         animation-name: searchpage;
         animation-duration: 4s;
         animation-iteration-count: infinite;
