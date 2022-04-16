@@ -1,7 +1,8 @@
-import { AfterViewInit, Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
-import { User } from 'src/app/classes/user';
-import { GithubService } from 'src/app/services/github.service';
+import { Component, OnInit } from '@angular/core';
+import { faGithub } from '@fortawesome/free-brands-svg-icons';
+import { faCodeBranch, faStar } from '@fortawesome/free-solid-svg-icons';
+import { GithubRepoService } from 'src/app/services/github-repo.service';
+
 
 
 @Component({
@@ -9,29 +10,33 @@ import { GithubService } from 'src/app/services/github.service';
   templateUrl: './resultpage.component.html',
   styleUrls: ['./resultpage.component.css']
 })
-export class ResultpageComponent implements OnInit, AfterViewInit {
+export class ResultpageComponent implements OnInit {
 
-  user!: User;
-  repos:any[] = [];
-  githubService: GithubService;
-  isDoneLoading!: boolean;
+  repos:any
+  githubIcon = faGithub
+  forkIcon = faCodeBranch
+  starIcon = faStar
+  username!:string
+  searchString!:string
+
   //browserRefresh: boolean;
-  route: Router;
 
-  constructor(githubService: GithubService, route: Router) {
-    this.githubService = githubService;
-    this.route = route;
-   }
+  constructor(private githubRepoService: GithubRepoService) { }
 
-  ngAfterViewInit(){
-    this.isDoneLoading = true;
+  repoLink(link:string){
+    window.open(link)
   }
 
-  ngOnInit(): void {
+  liveLink(link:string){
+    window.open(link)
+  }
 
-    //this.isDoneLoading = false;
-    //this.user = this.githubService.user;
-    //this.repos = this.githubService.repos;
+
+  ngOnInit(): void { }
+
+  newUserName(username:string){
+    this.githubRepoService.getRepo(username)
+    this.repos = this.githubRepoService.repos
   }
 
 }

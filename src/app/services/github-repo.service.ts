@@ -16,7 +16,7 @@ export class GithubRepoService {
     this.route = route;
    }
 
-   getData(username: string){
+   getRepo(username: string){
     interface ApiResponseRepositories{
         name:string,
         description:string,
@@ -61,8 +61,8 @@ export class GithubRepoService {
             }
             reject(error);
         });
-        return promise;
+        //return promise;
     });
-    //return promise;
+    return promise;
   }
 }
