@@ -17,7 +17,7 @@ export class SearchpageComponent implements OnInit {
 
   startSearch(){
     if(this.username){
-        this.route.navigate(['user'], {queryParams:{data:this.username}});
+        this.route.navigate(['results'], {queryParams:{data:this.username}});
     }else{
         this.isEmpty = true;
     }
