@@ -11,6 +11,7 @@ import { ResultpageComponent } from './components/resultpage/resultpage.componen
 import { DatePipe } from './pipes/date.pipe';
 import { UsersComponent } from './components/users/users.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { FilterPipe } from './pipes/filter.pipe';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     SearchpageComponent,
     ResultpageComponent,
     DatePipe,
-    UsersComponent
+    UsersComponent,
+    FilterPipe
   ],
   imports: [
     BrowserModule,
