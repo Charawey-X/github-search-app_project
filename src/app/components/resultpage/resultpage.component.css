@@ -105,3 +105,19 @@ input[type='text'] {
     font-size: 0.8rem;
     color: #919cba;
 }
+
+.load {
+    position: absolute !important;
+    top: 0;
+    left: 0;
+    background-color: #1f1f1f;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.load i {
+    font-size: 3rem;
+}

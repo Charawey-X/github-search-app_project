@@ -18,6 +18,7 @@ export class ResultpageComponent implements OnInit {
   starIcon = faStar
   username!:string
   searchString!:string
+  //isDoneLoading!:boolean
 
   //browserRefresh: boolean;
 
@@ -31,8 +32,15 @@ export class ResultpageComponent implements OnInit {
     window.open(link)
   }
 
+  //ngAfterViewInit(){
+      //this.isDoneLoading = true;
+  //}
 
-  ngOnInit(): void { }
+
+  ngOnInit(): void {
+    //this.isDoneLoading = false;
+    //this.browserRefresh = browserRefresh;
+  }
 
   newUserName(username:string){
     this.githubRepoService.getRepo(username)
