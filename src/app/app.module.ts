@@ -13,6 +13,7 @@ import { UsersComponent } from './components/users/users.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FilterPipe } from './pipes/filter.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
+import { ErrorpageComponent } from './components/errorpage/errorpage.component';
 
 
 @NgModule({
@@ -23,7 +24,8 @@ import { HighlightDirective } from './directives/highlight.directive';
     DatePipe,
     UsersComponent,
     FilterPipe,
-    HighlightDirective
+    HighlightDirective,
+    ErrorpageComponent
   ],
   imports: [
     BrowserModule,
