@@ -12,6 +12,7 @@ import { DatePipe } from './pipes/date.pipe';
 import { UsersComponent } from './components/users/users.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FilterPipe } from './pipes/filter.pipe';
+import { HighlightDirective } from './directives/highlight.directive';
 
 
 @NgModule({
@@ -21,7 +22,8 @@ import { FilterPipe } from './pipes/filter.pipe';
     ResultpageComponent,
     DatePipe,
     UsersComponent,
-    FilterPipe
+    FilterPipe,
+    HighlightDirective
   ],
   imports: [
     BrowserModule,
