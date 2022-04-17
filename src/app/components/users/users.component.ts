@@ -65,6 +65,8 @@ export class UsersComponent implements OnInit {
       this.onSubmitForm.emit(this.username)
       this.githubUserService.getUser(this.username)
       this.user = this.githubUserService.user
+      //component reload
+      this.ngOnInit();
     })
   }
 }

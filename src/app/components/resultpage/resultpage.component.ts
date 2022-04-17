@@ -45,6 +45,7 @@ export class ResultpageComponent implements OnInit {
   newUserName(username:string){
     this.githubRepoService.getRepo(username)
     this.repos = this.githubRepoService.repos
+    //this.ngOnInit();
   }
 
 }
