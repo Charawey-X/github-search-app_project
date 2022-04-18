@@ -1,0 +1,41 @@
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 5rem;
+    padding: 0 2rem;
+    margin-bottom: 2rem;
+}
+
+.nav-items {
+    display: flex;
+    gap: 2rem;
+}
+
+li {
+    list-style: none;
+}
+
+.logo {
+    border: 1px solid #64ffda;
+    padding: 0.5rem 1rem;
+    border-radius: 0.8rem;
+    font-weight: bold;
+    color: #64ffda;
+    cursor: pointer;
+}
+
+.logo:hover {
+    transform: scale(1.2);
+}
+
+img {
+    height: 4rem;
+    width: 4rem;
+    margin-top: 1rem;
+}
+
+img:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}

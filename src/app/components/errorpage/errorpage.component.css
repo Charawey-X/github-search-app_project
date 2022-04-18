@@ -1,0 +1,29 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.row {
+    width: 50%;
+}
+
+img {
+    height: 250px;
+    width: 250px;
+}
+
+.github {
+    font-size: 60px;
+    font-family: 'Exo' !important;
+    font-weight: 900;
+    color: lightgray !important;
+}
+
+.search {
+    font-size: 20px;
+    font-family: 'Exo' !important;
+    font-weight: 900;
+    color: lightgray !important;
+}

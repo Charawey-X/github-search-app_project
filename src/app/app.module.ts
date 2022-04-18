@@ -14,6 +14,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { FilterPipe } from './pipes/filter.pipe';
 import { HighlightDirective } from './directives/highlight.directive';
 import { ErrorpageComponent } from './components/errorpage/errorpage.component';
+import { HeaderComponent } from './components/header/header.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { ErrorpageComponent } from './components/errorpage/errorpage.component';
     UsersComponent,
     FilterPipe,
     HighlightDirective,
-    ErrorpageComponent
+    ErrorpageComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule,
